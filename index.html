@@ -1,0 +1,769 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-lang="ar">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Sabri Ashraf</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Sabri Ashraf — medical student at Ain Shams, medical content creator, short-form video editor, AI video generator and n8n automation builder, available remotely for the Gulf and Europe.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alexandria:wght@500;600;700&family=Readex+Pro:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a short clinical file — ID-badge hero, a dark vitals monitor, four services,
+   a data-driven gallery of reels (add a line to WORKS to add a reel), automation case
+   reports, and a prescription pad as the call to action. */
+:root{
+  --paper:#EFF4F3;
+  --card:#FFFFFF;
+  --ink:#0E1D23;
+  --muted:#56686D;
+  --line:#D2DDDB;
+  --teal:#0A766E;
+  --teal-soft:#DCEDEA;
+  --pulse:#D4473B;
+  --stage:#0A1A21;
+  --stage-2:#11262E;
+  --stage-ink:#E3EFED;
+  --stage-muted:#8AA3A5;
+  --stage-line:#1E3940;
+  --signal:#43D3BF;
+  --shadow:0 1px 2px rgba(14,29,35,.06),0 12px 32px -12px rgba(14,29,35,.18);
+
+  --f-display:"Alexandria","Readex Pro","Segoe UI",Tahoma,sans-serif;
+  --f-body:"Readex Pro","Segoe UI",Tahoma,system-ui,sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,Consolas,monospace;
+  --s4:clamp(1.9rem,4vw,2.9rem);
+  --r:14px;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --paper:#0A1316;--card:#101D21;--ink:#E4EFED;--muted:#8DA2A4;--line:#1E3035;
+  --teal:#3CC7B4;--teal-soft:#0F2C2A;--pulse:#FF6D60;
+  --stage:#060E11;--stage-2:#0D1C21;--stage-ink:#E3EFED;--stage-muted:#86A0A2;--stage-line:#183037;--signal:#43D3BF;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 16px 40px -16px rgba(0,0,0,.6);
+  color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#0A1316;--card:#101D21;--ink:#E4EFED;--muted:#8DA2A4;--line:#1E3035;
+  --teal:#3CC7B4;--teal-soft:#0F2C2A;--pulse:#FF6D60;
+  --stage:#060E11;--stage-2:#0D1C21;--stage-ink:#E3EFED;--stage-muted:#86A0A2;--stage-line:#183037;--signal:#43D3BF;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 16px 40px -16px rgba(0,0,0,.6);
+  color-scheme:dark}
+
+:root[data-lang="ar"] .en{display:none!important}
+:root[data-lang="en"] .ar{display:none!important}
+[hidden]{display:none!important}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
+body{background:var(--paper);color:var(--ink);font-family:var(--f-body);font-weight:400;font-size:1rem;line-height:1.75;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2{font-family:var(--f-display);font-weight:700;line-height:1.3;text-wrap:balance;margin:0}
+h3{font-family:var(--f-display);font-weight:600;line-height:1.45;text-wrap:balance;margin:0}
+p{margin:0}
+a{color:inherit}
+button{font:inherit;color:inherit;cursor:pointer}
+:focus-visible{outline:2px solid var(--teal);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1160px;margin-inline:auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.mono{font-family:var(--f-mono);font-size:.78rem;letter-spacing:.06em;text-transform:uppercase}
+.mono .ar{font-family:var(--f-body);letter-spacing:0;font-weight:500;font-size:1.05em}
+.eyebrow{display:inline-flex;align-items:center;gap:.6em;color:var(--teal)}
+.eyebrow::before{content:"";width:22px;height:2px;background:currentColor;border-radius:2px}
+section{padding-block:clamp(52px,8vw,92px)}
+.sec-head{display:grid;gap:12px;max-width:44rem;margin-bottom:clamp(26px,4vw,40px)}
+.sec-head h2{font-size:var(--s4)}
+.sec-head p{color:var(--muted);font-size:1.08rem;font-weight:300}
+
+.topbar{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;background:color-mix(in srgb,var(--paper) 86%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:12px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:var(--f-display);font-weight:600;font-size:1.02rem}
+.brand-mark{width:34px;height:34px;border-radius:10px;background:var(--teal);color:var(--paper);display:grid;place-items:center;font-family:var(--f-mono);font-size:.78rem;font-weight:500}
+.nav{display:flex;gap:22px;align-items:center}
+.nav a{text-decoration:none;color:var(--muted);font-size:.95rem}
+.nav a:hover{color:var(--ink)}
+.lang{display:inline-flex;border:1px solid var(--line);border-radius:999px;padding:3px;background:var(--card)}
+.lang button{border:0;background:transparent;padding:4px 12px;border-radius:999px;font-size:.85rem;color:var(--muted)}
+.lang button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+@media (max-width:820px){.nav a{display:none}}
+
+.hero{position:relative;padding-block:clamp(36px,6vw,80px) clamp(44px,6vw,72px);overflow:hidden}
+.ecg{position:absolute;inset-inline:0;bottom:-14px;height:90px;width:100%;pointer-events:none;opacity:.5}
+.ecg path{fill:none;stroke:var(--pulse);stroke-width:2;stroke-linejoin:round;stroke-linecap:round;stroke-dasharray:2400;stroke-dashoffset:2400;animation:trace 3.6s cubic-bezier(.4,0,.2,1) .3s forwards}
+@keyframes trace{to{stroke-dashoffset:0}}
+.hero-grid{position:relative;display:grid;grid-template-columns:1.3fr .8fr;gap:clamp(28px,5vw,72px);align-items:center}
+@media (max-width:900px){.hero-grid{grid-template-columns:1fr}}
+.hero-copy{display:grid;gap:22px;min-width:0}
+.hero h1{font-size:clamp(2.1rem,4.8vw,3.6rem);letter-spacing:-.005em}
+.hero h1 em{font-style:normal;color:var(--teal);position:relative;white-space:nowrap}
+.hero h1 em::after{content:"";position:absolute;inset-inline:0;bottom:.02em;height:.13em;background:var(--pulse);opacity:.25;border-radius:2px}
+.lede{font-size:clamp(1.05rem,1.6vw,1.2rem);color:var(--muted);max-width:36rem;font-weight:300;line-height:1.95}
+.lede strong{color:var(--ink);font-weight:500}
+.sub-title{font-family:var(--f-display);font-weight:600;font-size:clamp(1.25rem,2.4vw,1.7rem);line-height:1.6;color:var(--teal);max-width:36rem}
+.roles{display:flex;flex-wrap:wrap;gap:8px}
+.role{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border-radius:999px;border:1px solid var(--line);background:var(--card);font-size:.88rem}
+.role i{width:8px;height:8px;border-radius:50%;background:var(--teal);display:block}
+.role:nth-child(2) i{background:var(--pulse)}
+.role:nth-child(3) i{background:#C08A1E}
+.role:nth-child(4) i{background:#5B6CD8}
+.ctas{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:12px 22px;border-radius:12px;text-decoration:none;font-weight:500;border:1px solid transparent;transition:transform .15s ease}
+.btn:hover{transform:translateY(-1px)}
+.btn-primary{background:var(--ink);color:var(--paper)}
+.btn-ghost{border-color:var(--line);background:var(--card)}
+.btn svg{width:18px;height:18px}
+:root[data-lang="ar"] .flip{transform:scaleX(-1)}
+
+.badge-zone{display:grid;justify-items:center;padding-top:36px}
+.lanyard{width:46px;height:56px;border:3px solid var(--teal);border-bottom:0;border-radius:24px 24px 0 0;margin-bottom:-6px;position:relative;z-index:1}
+.idcard{width:min(310px,100%);background:var(--card);border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow);overflow:hidden;transform-origin:50% -40px;animation:swing 2.4s ease-out .2s both}
+@keyframes swing{0%{transform:rotate(-7deg)}35%{transform:rotate(4deg)}60%{transform:rotate(-2deg)}80%{transform:rotate(1deg)}100%{transform:rotate(-1.5deg)}}
+.id-top{direction:ltr;background:var(--teal);color:var(--paper);padding:11px 16px;display:flex;justify-content:space-between;align-items:center;gap:8px}
+.id-top .mono{font-size:.64rem;letter-spacing:.1em}
+.slot{width:44px;height:8px;border-radius:8px;background:var(--paper);opacity:.85;flex:none}
+.id-body{padding:16px;display:grid;gap:12px}
+.id-photo{aspect-ratio:4/4.3;border-radius:14px;overflow:hidden;background:var(--teal-soft)}
+.id-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 18%;display:block}
+.id-name{font-family:var(--f-display);font-size:1.35rem;font-weight:700;line-height:1.2}
+.id-sub{color:var(--muted);font-size:.88rem}
+.access{display:flex;flex-wrap:wrap;gap:6px;padding-top:12px;border-top:1px dashed var(--line);direction:ltr}
+.access span{font-family:var(--f-mono);font-size:.64rem;letter-spacing:.06em;padding:3px 8px;border-radius:6px;background:var(--teal-soft);color:var(--teal);text-transform:uppercase}
+
+.monitor{background:var(--stage);color:var(--stage-ink)}
+.monitor .wrap{display:grid;grid-template-columns:repeat(4,1fr);padding-block:22px}
+.vital{display:grid;gap:2px;padding:6px 20px;border-inline-start:1px solid var(--stage-line);min-width:0;text-decoration:none;color:inherit;align-content:start}
+.vital:first-child{border-inline-start:0;padding-inline-start:0}
+.vital .mono{color:var(--stage-muted);font-size:.66rem}
+.vital b{font-family:var(--f-display);font-size:clamp(1.2rem,2.3vw,1.6rem);color:var(--signal);font-weight:600;line-height:1.35;overflow-wrap:anywhere}
+.vital b.ltr{direction:ltr;unicode-bidi:isolate;text-align:start}
+.vital small{color:var(--stage-muted);font-size:.84rem;line-height:1.5}
+.pill{display:inline-block;font-family:var(--f-mono);font-size:.62rem;letter-spacing:.06em;padding:1px 7px;border:1px solid var(--stage-line);border-radius:999px;color:var(--stage-ink);margin-inline-start:6px;vertical-align:1px}
+a.vital:hover b{text-decoration:underline;text-underline-offset:4px}
+@media (max-width:820px){.monitor .wrap{grid-template-columns:repeat(2,1fr);gap:16px 0}.vital{border:0;padding-inline:0 12px}}
+
+.ddx{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+@media (max-width:1000px){.ddx{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:560px){.ddx{grid-template-columns:1fr}}
+.svc{display:grid;gap:10px;padding:22px;background:var(--card);border:1px solid var(--line);border-radius:18px;align-content:start;min-width:0;transition:border-color .2s,transform .2s}
+.svc:hover{border-color:var(--teal);transform:translateY(-2px)}
+.svc-icon{width:46px;height:46px;border-radius:13px;background:var(--teal-soft);color:var(--teal);display:grid;place-items:center}
+.svc-icon svg{width:23px;height:23px}
+.svc h3{font-size:1.06rem;unicode-bidi:plaintext}
+.pitch{font-family:var(--f-display);font-size:1.05rem;color:var(--teal);font-weight:600;line-height:1.6}
+.svc p.body{color:var(--muted);font-size:.93rem;font-weight:300}
+
+.band{background:var(--stage);color:var(--stage-ink)}
+.band .sec-head p{color:var(--stage-muted)}
+.band .eyebrow{color:var(--signal)}
+.work-top{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:18px;margin-bottom:24px}
+.work-top .sec-head{margin-bottom:0}
+.page-card{display:flex;align-items:center;gap:14px;padding:12px 18px 12px 12px;border-radius:16px;border:1px solid var(--stage-line);background:var(--stage-2);text-decoration:none;color:var(--stage-ink);transition:border-color .2s}
+.page-card:hover{border-color:var(--signal)}
+.page-logo{width:46px;height:46px;border-radius:50%;background:conic-gradient(from 200deg,var(--signal),#2B6CB0,var(--signal));display:grid;place-items:center;flex:none}
+.page-logo span{width:38px;height:38px;border-radius:50%;background:var(--stage);display:grid;place-items:center;font-family:var(--f-mono);font-size:.7rem;color:var(--signal)}
+.page-card b{display:block;font-family:var(--f-mono);font-weight:500;direction:ltr;text-align:start}
+.page-card small{color:var(--stage-muted);font-size:.84rem}
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
+.filters button{border:1px solid var(--stage-line);background:transparent;color:var(--stage-muted);border-radius:999px;padding:6px 15px;font-size:.88rem}
+.filters button[aria-pressed="true"]{background:var(--signal);border-color:var(--signal);color:var(--stage)}
+.works{display:grid;grid-template-columns:repeat(auto-fill,minmax(165px,1fr));gap:clamp(14px,2.4vw,24px)}
+@media (max-width:420px){.works{grid-template-columns:repeat(2,1fr)}}
+.work{display:grid;gap:10px;align-content:start;min-width:0}
+.phone{position:relative;aspect-ratio:9/16;width:100%;border-radius:18px;overflow:hidden;background:#000;border:2px solid var(--stage-line);cursor:pointer;padding:0;transition:border-color .2s,transform .2s}
+.phone:hover{border-color:var(--signal);transform:translateY(-3px)}
+.phone img,.phone video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.phone video{opacity:0;transition:opacity .25s}
+.phone.previewing video{opacity:1}
+.phone .play{position:absolute;inset:auto 0 0 0;padding:28px 10px 10px;display:flex;justify-content:space-between;align-items:center;background:linear-gradient(to top,rgba(0,0,0,.78),transparent);color:#fff;direction:ltr}
+.phone .play span{font-family:var(--f-mono);font-size:.7rem}
+.phone .play i{width:30px;height:30px;border-radius:50%;background:#fff;color:#000;display:grid;place-items:center}
+.phone .play i svg{width:13px;height:13px;margin-left:2px}
+.phone .kind{position:absolute;top:8px;inset-inline-start:8px;font-family:var(--f-mono);font-size:.58rem;letter-spacing:.06em;text-transform:uppercase;padding:3px 7px;border-radius:6px;background:rgba(6,14,17,.72);color:#43D3BF}
+.work h3{font-size:.95rem;font-weight:500;line-height:1.55;color:var(--stage-ink)}
+.work .topic{font-size:.78rem;color:var(--stage-muted)}
+.add-slot{aspect-ratio:9/16;border-radius:18px;border:1.5px dashed var(--stage-line);display:grid;place-items:center;text-align:center;padding:16px;color:var(--stage-muted);font-size:.88rem;text-decoration:none}
+.add-slot b{display:block;font-family:var(--f-display);font-size:2rem;color:var(--signal);font-weight:500;line-height:1.2}
+.add-slot:hover{border-color:var(--signal);color:var(--stage-ink)}
+
+.minis{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:22px}
+@media (max-width:760px){.minis{grid-template-columns:1fr}}
+.mini{display:grid;gap:8px;padding:22px;border:1px solid var(--line);border-radius:18px;background:var(--card);align-content:start;min-width:0}
+.mini .mono{color:var(--teal);font-size:.72rem}
+.mini h3{font-size:1.2rem}
+.mini p{color:var(--muted);font-size:.93rem;font-weight:300}
+.lightbox{position:fixed;inset:0;z-index:80;background:rgba(3,9,11,.97);display:grid;place-items:center;overflow:auto;padding:max(20px,env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) max(20px,env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
+.lb-inner{display:grid;grid-template-columns:auto minmax(0,300px);gap:24px;align-items:center;color:#E3EFED;max-width:100%}
+@media (max-width:720px){.lb-inner{grid-template-columns:1fr;justify-items:center;gap:14px}}
+.lb-inner video{height:min(78dvh,680px);max-width:100%;aspect-ratio:9/16;border-radius:22px;background:#000;border:2px solid #1E3940}
+@media (max-width:720px){.lb-inner video{height:auto;width:min(320px,100%);max-height:66dvh}}
+.lb-text{display:grid;gap:12px;align-content:start}
+.lb-text .tagrow{display:flex;gap:6px;flex-wrap:wrap}
+.lb-text .tagrow span{font-family:var(--f-mono);font-size:.62rem;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:6px;background:rgba(67,211,191,.14);color:#43D3BF}
+.lb-text h3{font-size:1.25rem;color:#E3EFED}
+.lb-text p{color:#9DB4B6;font-size:.94rem;font-weight:300}
+.lb-text .hook{color:#E3EFED;font-weight:500;padding-top:10px;border-top:1px dashed #23434A}
+.lb-actions{display:flex;gap:8px;flex-wrap:wrap}
+.lb-actions button{border:1px solid #2A474F;background:transparent;color:#E3EFED;border-radius:999px;padding:6px 14px;font-size:.85rem}
+.lb-actions button:hover{border-color:#43D3BF}
+
+.proj{display:grid;grid-template-columns:1.05fr .95fr;gap:22px;align-items:start}
+@media (max-width:960px){.proj{grid-template-columns:1fr}}
+.demo-label{justify-self:start;display:inline-flex;gap:8px;align-items:center;padding:4px 12px;border-radius:999px;background:var(--teal-soft);color:var(--teal);font-size:.82rem}
+.sim{background:var(--card);border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow);overflow:hidden;min-width:0}
+.sim-head{display:flex;justify-content:space-between;align-items:center;padding:13px 18px;border-bottom:1px solid var(--line);gap:10px;direction:ltr}
+.sim-head .who{display:flex;gap:10px;align-items:center}
+.iris{width:34px;height:34px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center}
+.iris::after{content:"";width:12px;height:12px;border-radius:50%;border:3px solid var(--teal);box-shadow:0 0 0 4px var(--teal-soft)}
+.sim-head b{font-weight:500;display:block;line-height:1.2}
+.sim-head small{color:var(--muted)}
+.live{font-family:var(--f-mono);font-size:.64rem;letter-spacing:.08em;color:var(--teal);display:flex;align-items:center;gap:6px}
+.live::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--teal);animation:blink 1.6s infinite}
+@keyframes blink{50%{opacity:.25}}
+.sim-body{display:grid;grid-template-columns:1fr 200px;min-height:420px;direction:ltr}
+@media (max-width:640px){.sim-body{grid-template-columns:1fr}}
+.chat{padding:18px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.msg{max-width:86%;padding:9px 14px;border-radius:14px;font-size:.9rem;line-height:1.55;animation:pop .3s ease-out both}
+.msg.p{align-self:flex-end;background:var(--teal);color:var(--paper);border-bottom-right-radius:4px}
+.msg.a{align-self:flex-start;background:var(--paper);border:1px solid var(--line);border-bottom-left-radius:4px}
+.msg.ok{border-color:var(--teal);box-shadow:inset 3px 0 0 var(--teal)}
+.typing{align-self:flex-start;display:flex;gap:4px;padding:12px 14px;border-radius:14px;background:var(--paper);border:1px solid var(--line)}
+.typing i{width:6px;height:6px;border-radius:50%;background:var(--muted);animation:dot 1s infinite}
+.typing i:nth-child(2){animation-delay:.15s}.typing i:nth-child(3){animation-delay:.3s}
+@keyframes dot{50%{opacity:.25;transform:translateY(-2px)}}
+@keyframes pop{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.trace{border-left:1px solid var(--line);padding:16px 14px;display:grid;gap:6px;align-content:start;background:color-mix(in srgb,var(--paper) 55%,var(--card))}
+@media (max-width:640px){.trace{border-left:0;border-top:1px solid var(--line)}}
+.trace .mono{color:var(--muted);font-size:.62rem;margin-bottom:4px}
+.step{display:flex;gap:9px;align-items:center;font-family:var(--f-mono);font-size:.7rem;color:var(--muted);padding:6px 8px;border-radius:8px;border:1px solid transparent;transition:all .3s}
+.step i{width:9px;height:9px;border-radius:50%;border:1.5px solid currentColor;flex:none}
+.step.run{color:var(--ink);border-color:var(--line);background:var(--card)}
+.step.run i{background:#C08A1E;border-color:#C08A1E;animation:blink .8s infinite}
+.step.done{color:var(--ink)}
+.step.done i{background:var(--teal);border-color:var(--teal)}
+.sim-foot{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:11px 18px;border-top:1px solid var(--line);flex-wrap:wrap}
+.sim-foot small{color:var(--muted);font-size:.8rem}
+.replay{border:1px solid var(--line);background:var(--paper);border-radius:8px;padding:5px 12px;font-size:.84rem}
+
+.proj-side{display:grid;gap:16px;min-width:0}
+.proj-side h3{font-size:1.4rem}
+.case-pitch{font-size:1.06rem;line-height:1.9;color:var(--muted);font-weight:300}
+.case-pitch b{color:var(--teal);font-weight:500}
+.facts{display:grid;border:1px solid var(--line);border-radius:var(--r);background:var(--card);overflow:hidden;margin:0}
+.fact{display:grid;grid-template-columns:96px 1fr;gap:14px;padding:12px 16px;border-top:1px solid var(--line);font-size:.92rem}
+.fact:first-child{border-top:0}
+.fact dt{color:var(--muted);font-size:.82rem}
+.fact dd{margin:0}
+@media (max-width:480px){.fact{grid-template-columns:1fr;gap:2px}}
+.stack{display:flex;flex-wrap:wrap;gap:6px;direction:ltr;justify-content:flex-end}
+:root[data-lang="en"] .stack{justify-content:flex-start}
+.stack span{font-family:var(--f-mono);font-size:.68rem;padding:4px 9px;border-radius:8px;background:var(--card);border:1px solid var(--line)}
+details.more{grid-column:1/-1;border:1px solid var(--line);border-radius:var(--r);background:var(--card)}
+details.more summary{cursor:pointer;padding:14px 18px;font-weight:500;list-style:none;display:flex;justify-content:space-between;gap:12px}
+details.more summary::-webkit-details-marker{display:none}
+details.more summary::after{content:"+";color:var(--teal);font-size:1.3rem;line-height:1}
+details.more[open] summary::after{content:"–"}
+.more-body{padding:0 18px 18px;display:grid;gap:18px}
+.more-body .frame{border:1px solid var(--line);border-radius:14px;overflow:auto;background:#F7F7F7}
+.more-body img{display:block;width:100%;min-width:600px;height:auto}
+.lessons{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+@media (max-width:760px){.lessons{grid-template-columns:1fr}}
+.lesson{padding:14px 16px;border-radius:12px;border:1px solid var(--line);display:grid;gap:4px}
+.lesson h4{margin:0;font-size:.96rem;font-family:var(--f-display);font-weight:600}
+.lesson p{color:var(--muted);font-size:.88rem;font-weight:300}
+.planned{color:var(--muted);font-size:.88rem}
+
+.rx-wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(24px,5vw,64px);align-items:center}
+@media (max-width:900px){.rx-wrap{grid-template-columns:1fr}}
+.rx-copy{display:grid;gap:16px}
+.rx-copy h2{font-size:var(--s4)}
+.rx-copy p{color:var(--muted);font-size:1.08rem;font-weight:300}
+.pad{background:var(--card);border:1px solid var(--line);border-radius:6px 6px 18px 18px;box-shadow:var(--shadow);overflow:hidden;min-width:0}
+.pad-head{display:flex;justify-content:space-between;gap:12px;padding:18px 22px 14px;border-bottom:2px solid var(--teal)}
+.pad-head b{font-family:var(--f-display);font-size:1.15rem;display:block;font-weight:600}
+.pad-head small{color:var(--muted);font-size:.84rem}
+.pad-head .mono{color:var(--muted);font-size:.62rem;text-align:end}
+.pad-body{padding:16px 22px 20px;display:grid;gap:14px}
+.rx-sym{font-family:Georgia,"Times New Roman",serif;font-size:3rem;line-height:.8;color:var(--pulse);font-style:italic}
+.field{display:grid;gap:6px}
+.field label,.field legend{font-size:.8rem;color:var(--muted);padding:0}
+.field input,.field select{width:100%;border:0;border-bottom:1.5px dashed var(--line);background:transparent;padding:6px 2px;font:inherit;color:var(--ink)}
+.field input:focus,.field select:focus{outline:0;border-bottom-color:var(--teal)}
+.field select option{background:var(--card);color:var(--ink)}
+fieldset.field{border:0;margin:0;padding:0}
+.checks{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+@media (max-width:480px){.checks{grid-template-columns:1fr}}
+.checks label{display:flex;gap:10px;align-items:center;padding:8px 12px;border:1px solid var(--line);border-radius:10px;background:var(--card);font-size:.9rem;cursor:pointer;color:var(--ink)}
+.checks input{accent-color:var(--teal);width:16px;height:16px}
+.checks label:has(input:checked){border-color:var(--teal);background:var(--teal-soft)}
+.sig{padding:12px 16px;border-radius:10px;background:var(--paper);border:1px solid var(--line);font-size:.93rem;line-height:1.8;white-space:pre-line;min-height:96px}
+.pad-foot{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between}
+.pad-foot .sign{font-family:var(--f-display);color:var(--teal)}
+.copied{color:var(--teal);font-size:.88rem}
+.contact{display:flex;flex-wrap:wrap;gap:10px}
+.contact a,.contact span{display:inline-flex;gap:8px;align-items:center;padding:8px 14px;border-radius:10px;border:1px solid var(--line);background:var(--card);text-decoration:none;font-size:.9rem;direction:ltr}
+
+.foot-links{display:flex;flex-wrap:wrap;gap:6px 18px;direction:ltr}
+.foot-links a{text-decoration:none}
+footer{border-top:1px solid var(--line);padding-block:26px}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;color:var(--muted);font-size:.88rem}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="#top"><span class="brand-mark">S.A</span><span class="ar">صبري أشرف</span><span class="en">Sabri Ashraf</span></a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#services"><span class="ar">الخدمات</span><span class="en">Services</span></a>
+      <a href="#work"><span class="ar">الأعمال</span><span class="en">Work</span></a>
+      <a href="#automation"><span class="ar">الأتمتة</span><span class="en">Automation</span></a>
+      <a href="#rx"><span class="ar">تواصل</span><span class="en">Contact</span></a>
+    </nav>
+    <div class="lang" role="group" aria-label="Language">
+      <button type="button" id="lang-ar" data-set-lang="ar" aria-pressed="true">عربي</button>
+      <button type="button" id="lang-en" data-set-lang="en" aria-pressed="false">EN</button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <svg class="ecg" viewBox="0 0 1600 120" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0 70 H180 l14 0 8-10 8 10 h22 l8 18 14-80 14 92 10-30 h40 q14-22 28 0 H560 l14 0 8-10 8 10 h22 l8 18 14-80 14 92 10-30 h40 q14-22 28 0 H940 l14 0 8-10 8 10 h22 l8 18 14-80 14 92 10-30 h40 q14-22 28 0 H1320 l14 0 8-10 8 10 h22 l8 18 14-80 14 92 10-30 h40 q14-22 28 0 H1600"/>
+  </svg>
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <h1><span class="ar">صبري أشرف</span><span class="en">Sabri Ashraf</span></h1>
+      <p class="sub-title"><span class="ar">طالب طب في جامعة عين شمس. صانع محتوى طبي ومطوّر أتمتة بالذكاء الاصطناعي.</span><span class="en">Medical student at Ain Shams University. Medical content creator and AI automation builder.</span></p>
+      <p class="lede">
+        <span class="ar">أكتب وأمنتج فيديوهات طبية قصيرة بالعربية بمصطلحات إنجليزية دقيقة، وأبني أنظمة أتمتة وأدوات ذكاء اصطناعي بـ n8n. متاح لمشاريع عن بعد في الخليج وأوروبا.</span>
+        <span class="en">I write and produce short medical videos in Arabic with accurate English terminology, and I build automation systems and AI tools with n8n. Open to remote projects in the Gulf and Europe.</span>
+      </p>
+      <div class="roles" aria-label="Roles">
+        <span class="role"><i></i>Medical Content Creator</span>
+        <span class="role"><i></i>Short-form Video Editor</span>
+        <span class="role"><i></i>AI Video Generator</span>
+        <span class="role"><i></i>AI Automation · n8n</span>
+      </div>
+      <div class="ctas">
+        <a class="btn btn-primary" href="#work"><span class="ar">الأعمال</span><span class="en">Work</span>
+          <svg class="flip" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn btn-ghost" href="#rx"><span class="ar">تواصل</span><span class="en">Contact</span></a>
+      </div>
+    </div>
+
+    <div class="badge-zone">
+      <div class="lanyard" aria-hidden="true"></div>
+      <div class="idcard">
+        <div class="id-top"><span class="mono">Ain Shams · Faculty of Medicine</span><span class="slot" aria-hidden="true"></span></div>
+        <div class="id-body">
+          <div class="id-photo"><img src="media/profile.jpg" alt="Sabri Ashraf" width="900" height="1200"></div>
+          <div>
+            <div class="id-name"><span class="ar">صبري أشرف</span><span class="en">Sabri Ashraf</span></div>
+            <div class="id-sub"><span class="ar">طالب طب · صانع محتوى طبي</span><span class="en">Medical student · Medical creator</span></div>
+          </div>
+          <div class="access"><span>Content</span><span>Video</span><span>AI Gen</span><span>n8n</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="monitor" aria-label="At a glance">
+  <div class="wrap">
+    <div class="vital"><span class="mono">MBBCh · AIN SHAMS</span><b><span class="ar">السنة الثالثة</span><span class="en">Year 3</span></b><small><span class="ar">طب عين شمس</span><span class="en">Ain Shams Medicine</span><span class="pill">GRADE A</span></small></div>
+    <div class="vital"><span class="mono">AVAILABLE REMOTELY</span><b class="ltr">GCC · Europe</b><small><span class="ar">عيادات وصنّاع محتوى وHealthtech</span><span class="en">Clinics, creators, healthtech</span></small></div>
+    <div class="vital"><span class="mono">FORMAT</span><b class="ltr">9:16</b><small><span class="ar">ريلز · تيك توك · شورتس</span><span class="en">Reels · TikTok · Shorts</span></small></div>
+    <div class="vital"><span class="mono">AUTOMATION</span><b class="ltr">n8n + AI</b><small><span class="ar">وكلاء أذكياء متصلون بأدواتك</span><span class="en">AI agents wired to your tools</span></small></div>
+  </div>
+</div>
+
+<section id="services" aria-labelledby="svc-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow mono"><span class="ar">الخدمات</span><span class="en">Services</span></span>
+      <h2 id="svc-h"><span class="ar">ماذا أعمل</span><span class="en">What I do</span></h2>
+      <p><span class="ar">المحتوى المخصص لأي عيادة يعتمده طبيبها المرخّص قبل النشر.</span><span class="en">Content made for a clinic is approved by its licensed doctor before publishing.</span></p>
+    </div>
+    <div class="ddx">
+      <article class="svc">
+        <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h12l4 4v12H4z"/><path d="M8 10h8M8 14h8M8 18h5"/></svg></div>
+        <h3>Medical Content Creator</h3>
+        <p class="pitch"><span class="ar">سكريبتات مبنية على حالة أو سؤال.</span><span class="en">Scripts built around a case or a question.</span></p>
+        <p class="body"><span class="ar">معلومة دقيقة بالعربية مع المصطلح الإنجليزي.</span><span class="en">Accurate information in Arabic with English terms.</span></p>
+      </article>
+      <article class="svc">
+        <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M11 9l4 3-4 3z"/></svg></div>
+        <h3>Short-form Video Editor</h3>
+        <p class="pitch"><span class="ar">مونتاج عمودي للمحاضرات والبودكاست.</span><span class="en">Vertical edits of lectures and podcasts.</span></p>
+        <p class="body"><span class="ar">شاشة مقسومة للحوارات، كابشن ملوّن للمصطلحات، موشن جرافيك وأيقونات تشريحية.</span><span class="en">Split-screen conversations, highlighted captions, motion graphics and anatomy icons.</span></p>
+      </article>
+      <article class="svc">
+        <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="9" r="3.2"/><circle cx="16" cy="15" r="3.2"/><circle cx="17" cy="6" r="1.6"/><circle cx="6" cy="17" r="1.6"/></svg></div>
+        <h3>AI Video Generator</h3>
+        <p class="pitch"><span class="ar">مشاهد طبية لا تصل إليها الكاميرا.</span><span class="en">Medical shots no camera can reach.</span></p>
+        <p class="body"><span class="ar">مشاهد سينمائية من داخل الجسم لشرح آلية مرض أو دواء.</span><span class="en">Cinematic shots from inside the body to explain a disease or drug mechanism.</span></p>
+      </article>
+      <article class="svc">
+        <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="6" height="6" rx="1.5"/><rect x="15" y="3" width="6" height="6" rx="1.5"/><rect x="9" y="15" width="6" height="6" rx="1.5"/><path d="M6 9v3h12V9M12 12v3"/></svg></div>
+        <h3>AI Automation · n8n</h3>
+        <p class="pitch"><span class="ar">وكلاء ذكاء اصطناعي للعيادات.</span><span class="en">AI agents for clinics.</span></p>
+        <p class="body"><span class="ar">حجز وتأجيل وإلغاء ورد على الأسئلة، متصل بـ Calendar وSheets وGmail، مع تصعيد الطوارئ للفريق.</span><span class="en">Booking, rescheduling and FAQs connected to Calendar, Sheets and Gmail, with emergencies escalated to staff.</span></p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="work" class="band" aria-labelledby="work-h">
+  <div class="wrap">
+    <div class="work-top">
+      <div class="sec-head">
+        <span class="eyebrow mono"><span class="ar">الأعمال</span><span class="en">Work</span></span>
+        <h2 id="work-h"><span class="ar">مختارات من الريلز الطبية</span><span class="en">Selected medical reels</span></h2>
+        <p><span class="ar">مرّر الماوس للمعاينة، واضغط للمشاهدة بالصوت وقراءة التفاصيل.</span><span class="en">Hover to preview, click to watch with sound and read the details.</span></p>
+      </div>
+      <a class="page-card" href="https://www.instagram.com/med_vengers/" target="_blank" rel="noopener">
+        <span class="page-logo"><span>MV</span></span>
+        <span><b>@med_vengers</b><small><span class="ar">باقي الأعمال على صفحتي الطبية</span><span class="en">More work on my medical page</span></small></span>
+      </a>
+    </div>
+    <div class="filters" role="group" aria-label="Filter">
+      <button type="button" id="f-all" data-filter="all" aria-pressed="true"><span class="ar">الكل</span><span class="en">All</span></button>
+      <button type="button" id="f-levels" data-filter="levels" aria-pressed="false">3 Levels</button>
+      <button type="button" id="f-ai" data-filter="ai" aria-pressed="false">AI Video</button>
+      <button type="button" id="f-motion" data-filter="motion" aria-pressed="false">Motion Graphics</button>
+      <button type="button" id="f-podcast" data-filter="podcast" aria-pressed="false">Podcast Edit</button>
+    </div>
+    <div class="works" id="works"></div>
+  </div>
+</section>
+
+<section id="automation" aria-labelledby="auto-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow mono"><span class="ar">الأتمتة</span><span class="en">Automation</span></span>
+      <h2 id="auto-h"><span class="ar">أتمتة وأدوات</span><span class="en">Automation and tools</span></h2>
+    </div>
+
+    <article class="proj">
+      <div class="sim" aria-label="Simulated conversation">
+        <div class="sim-head">
+          <div class="who"><span class="iris" aria-hidden="true"></span><div><b>AlFarra Eye Clinic</b><small>AI Receptionist</small></div></div>
+          <span class="live">AVAILABLE</span>
+        </div>
+        <div class="sim-body">
+          <div class="chat" id="chat" aria-live="polite"></div>
+          <div class="trace">
+            <span class="mono">n8n · tool calls</span>
+            <div class="step"><i></i>Chat Trigger</div>
+            <div class="step"><i></i>AI Agent · intent</div>
+            <div class="step"><i></i>Calendar · Get events</div>
+            <div class="step"><i></i>Calendar · Availability</div>
+            <div class="step"><i></i>Calendar · Update</div>
+            <div class="step"><i></i>Sheets · Update row</div>
+            <div class="step"><i></i>Reply after success</div>
+          </div>
+        </div>
+        <div class="sim-foot">
+          <small><span class="ar">محاكاة توضيحية لسيناريو إعادة الحجز</span><span class="en">Illustrative replay of the reschedule scenario</span></small>
+          <button class="replay" type="button" id="replay">↻ <span class="ar">أعد التشغيل</span><span class="en">Replay</span></button>
+        </div>
+      </div>
+
+      <div class="proj-side">
+        <span class="demo-label"><span class="ar">مشروع شخصي · عيادة تجريبية وبيانات وهمية</span><span class="en">Personal project · demo clinic, fictional data</span></span>
+        <a class="btn btn-primary" id="live-demo" href="#" target="_blank" rel="noopener" hidden style="justify-self:start"><span class="ar">جرّب الديمو المباشر ↗</span><span class="en">Try the live demo ↗</span></a>
+        <h3><span class="ar">عيادة الفرّا للعيون: موظف استقبال ذكي</span><span class="en">AlFarra Eye Clinic: AI receptionist</span></h3>
+        <p class="case-pitch"><span class="ar">مساعد محادثة يرد على المرضى، ويحجز المواعيد ويسجّلها، ويبلّغ الفريق عند الطوارئ.</span><span class="en">A chat assistant that answers patients, books and logs appointments, and alerts staff to emergencies.</span></p>
+        <dl class="facts">
+          <div class="fact"><dt><span class="ar">ماذا يفعل</span><span class="en">What it does</span></dt><dd><span class="ar">يفهم الطلب، يسأل عن الناقص فقط، يتحقق من التقويم قبل أي وعد، ثم يحجز أو يؤجل أو يلغي ويسجّل.</span><span class="en">Reads the request, asks only for what's missing, checks the calendar before promising, then books, moves or cancels and logs it.</span></dd></div>
+          <div class="fact"><dt><span class="ar">الأمان</span><span class="en">Safety</span></dt><dd><span class="ar">لا يؤكد قبل نجاح الأداة. لا نصيحة طبية. الطوارئ تصل لفريق العيادة عبر Gmail.</span><span class="en">Never confirms before a tool succeeds. No medical advice. Emergencies reach staff via Gmail.</span></dd></div>
+          <div class="fact"><dt><span class="ar">دوري</span><span class="en">My role</span></dt><dd><span class="ar">صممته وبنيته بالكامل: الأتمتة، البرومبت، الواجهة، وتتبّع الأخطاء.</span><span class="en">Designed and built it alone: automation, prompts, frontend, debugging.</span></dd></div>
+        </dl>
+        <div class="stack"><span>n8n</span><span>OpenAI</span><span>Google Calendar</span><span>Sheets</span><span>Gmail</span><span>Next.js</span><span>Docker</span></div>
+      </div>
+
+      <details class="more">
+        <summary><span class="ar">تحت الغطاء: الـ workflow وما تعلمته من الأخطاء</span><span class="en">Under the hood: the workflow and what the bugs taught me</span></summary>
+        <div class="more-body">
+          <div class="frame"><img src="media/n8n.jpg" alt="n8n canvas: chat trigger into an AI Agent with OpenAI, memory, five Google Calendar tools, three Google Sheets tools and a Gmail alert" width="1487" height="620" loading="lazy"></div>
+          <div class="lessons">
+            <div class="lesson"><h4><span class="ar">منع الحجز المزدوج</span><span class="en">Preventing double-booking</span></h4><p><span class="ar">أضفت أدوات البحث والتوفّر وقاعدة: تحقّق قبل أن تنشئ.</span><span class="en">Added lookup and availability tools plus a rule: check before creating.</span></p></div>
+            <div class="lesson"><h4><span class="ar">مطابقة موثوقة للمواعيد</span><span class="en">Reliable matching</span></h4><p><span class="ar">بدل رقم الهاتف، صار Event ID من Google Calendar هو المرجع الوحيد.</span><span class="en">Replaced phone-number matching with the Calendar Event ID as the single source of truth.</span></p></div>
+            <div class="lesson"><h4><span class="ar">فشل صامت في الواجهة</span><span class="en">A silent frontend failure</span></h4><p><span class="ar">رد استغرق ~21 ثانية تجاوز مهلة 15 ثانية. رفعتها لـ45 وأظهرت خطأً صريحًا بدل رد وهمي.</span><span class="en">A ~21 s reply exceeded a 15 s timeout. Raised it to 45 s and showed an honest error instead of a mock reply.</span></p></div>
+            <div class="lesson"><h4>Webhook "Invalid URL"</h4><p><span class="ar">ضبط WEBHOOK_URL وN8N_EDITOR_BASE_URL في Docker.</span><span class="en">Set WEBHOOK_URL and N8N_EDITOR_BASE_URL in Docker.</span></p></div>
+          </div>
+          <p class="planned"><span class="ar">مخطط له (غير منفّذ بعد): WhatsApp Business، قناة صوتية عبر Retell AI، ونشر عام برابط دائم.</span><span class="en">Planned, not built yet: WhatsApp Business, a Retell AI voice channel, and a public deployment.</span></p>
+        </div>
+      </details>
+    </article>
+    <div class="minis">
+      <article class="mini">
+        <span class="mono"><span class="ar">منتج تعليمي</span><span class="en">Learning product</span></span>
+        <h3>Spotters</h3>
+        <p><span class="ar">تطبيق ويب يدرّب الطلاب على الامتحان العملي في Para وPatho وHisto: 167 عيّنة، مع حالات وأسئلة أسهم وشرح لكل جواب.</span><span class="en">A web app that trains students for practicals in para, patho and histo: 167 specimens, with cases, arrow questions and an explanation for every answer.</span></p>
+      </article>
+      <article class="mini">
+        <span class="mono"><span class="ar">نظام مونتاج</span><span class="en">Editing system</span></span>
+        <h3><span class="ar">مونتاج بمساعدة AI</span><span class="en">AI-assisted editing</span></h3>
+        <p><span class="ar">نظامي الخاص: تفريغ النص بـ Whisper، تنقية الصوت، قص الخلفية، وموشن جرافيك بـ Remotion، مع 5 أساليب مونتاج موثّقة تحافظ على هوية القناة.</span><span class="en">My own pipeline: Whisper transcription, speech cleanup, background removal and Remotion motion graphics, with 5 documented edit styles that keep a channel on brand.</span></p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="rx" aria-labelledby="rx-h" style="padding-top:0">
+  <div class="wrap rx-wrap">
+    <div class="rx-copy">
+      <span class="eyebrow mono"><span class="ar">تواصل</span><span class="en">Contact</span></span>
+      <h2 id="rx-h"><span class="ar">للتعاون</span><span class="en">Work together</span></h2>
+      <p><span class="ar">حدد نوع العمل وأرسل الرسالة على واتساب، أو استخدم بيانات التواصل مباشرة.</span><span class="en">Choose the type of work and send it on WhatsApp, or use the contact details directly.</span></p>
+      <div class="contact" id="contact"></div>
+    </div>
+    <form class="pad" id="rxform" novalidate>
+      <div class="pad-head">
+        <div><b><span class="ar">صبري أشرف</span><span class="en">Sabri Ashraf</span></b><small><span class="ar">محتوى طبي · مونتاج · AI · أتمتة</span><span class="en">Medical content · Editing · AI · Automation</span></small></div>
+        <div class="mono">Ain Shams<br>Medicine</div>
+      </div>
+      <div class="pad-body">
+        <div class="rx-sym" aria-hidden="true">℞</div>
+        <div class="field">
+          <label for="rx-name"><span class="ar">د. / العيادة</span><span class="en">Dr. / Clinic</span></label>
+          <input id="rx-name" type="text" autocomplete="off">
+        </div>
+        <fieldset class="field">
+          <legend><span class="ar">المطلوب</span><span class="en">Needed</span></legend>
+          <div class="checks">
+            <label><input type="checkbox" id="rx-content" value="content" checked>Content Creator</label>
+            <label><input type="checkbox" id="rx-edit" value="edit">Video Editing</label>
+            <label><input type="checkbox" id="rx-ai" value="ai">AI Video</label>
+            <label><input type="checkbox" id="rx-auto" value="auto">n8n Automation</label>
+          </div>
+        </fieldset>
+        <div class="field">
+          <label for="rx-dose"><span class="ar">الجرعة</span><span class="en">Dose</span></label>
+          <select id="rx-dose"></select>
+        </div>
+        <div class="sig" id="sig"></div>
+        <div class="pad-foot">
+          <a class="btn btn-primary" id="rx-wa" href="https://wa.me/201027260035" target="_blank" rel="noopener"><span class="ar">إرسال على واتساب</span><span class="en">Send on WhatsApp</span></a>
+          <button type="submit" class="btn btn-ghost" id="copy"><span class="ar">انسخ</span><span class="en">Copy</span></button>
+          <span class="copied" id="copied" hidden></span>
+          <span class="sign">— S.A</span>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span><span class="ar">© صبري أشرف · صُنع بين المحاضرات</span><span class="en">© Sabri Ashraf · Built between lectures</span></span>
+    <span class="foot-links"><a href="https://wa.me/201027260035" target="_blank" rel="noopener">WhatsApp</a><span>sabri.a.sabri@hotmail.com</span><a href="https://www.instagram.com/sabri_alfarra/" target="_blank" rel="noopener">@sabri_alfarra</a></span>
+  </div>
+</footer>
+
+<div class="lightbox" id="lb" hidden role="dialog" aria-modal="true" aria-labelledby="lb-title">
+  <div class="lb-inner">
+    <video id="lb-video" controls playsinline></video>
+    <div class="lb-text">
+      <div class="tagrow" id="lb-tags"></div>
+      <h3 id="lb-title"></h3>
+      <p id="lb-desc"></p>
+      <div class="lb-actions">
+        <button type="button" id="lb-alt" hidden></button>
+        <button type="button" id="lb-close"><span class="ar">إغلاق</span><span class="en">Close</span></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+/* Contact details: fill these in and they appear next to the prescription. Empty values stay hidden. */
+const DEMO_URL = ""; // paste the Vercel demo link here to show the button
+const CONTACT = { whatsapp: "+20 102 726 0035", waLink: "https://wa.me/201027260035", email: "sabri.a.sabri@hotmail.com", instagram: "https://www.instagram.com/sabri_alfarra/", handle: "@sabri_alfarra", linkedin: "" };
+
+/* To add a reel: put media/<id>.mp4 and media/<id>.jpg next to this page and add one entry here. */
+const WORKS = [
+  { id:"fever", cat:"levels", kind:"3 Levels", dur:"1:04", tags:["3 Levels","Original series"],
+    ar:{t:"الحرارة في 3 مستويات: لطفل، لطالب، لطبيب", topic:"سلسلتي الخاصة", d:"فكرة واحدة تُشرح ثلاث مرات بعمق متزايد، مع رسومات بخط اليد وبطاقات مصطلحات بين يدي المتحدث.", h:"نفس المعلومة تصل لمريضك وطالبك وزميلك في مقطع واحد."},
+    en:{t:"Fever in 3 levels: child, student, doctor", topic:"My original series", d:"One idea explained three times at growing depth, with hand-drawn notes and term cards held in the speaker's hands.", h:"One reel that reaches your patient, your student and your colleague."}},
+  { id:"gigantism", cat:"podcast", kind:"Podcast", dur:"1:12", tags:["Podcast Edit","Endocrine"],
+    ar:{t:"Gigantism وAcromegaly: نفس الهرمون، قصتان", topic:"غدد صماء", d:"حوار بين اثنين مع رسوم طبية متحركة بخط واحد: محور Pituitary وLiver، الورم، وEpiphyseal plate.", h:"أبني لك رسومًا طبية خاصة بدل الصور الجاهزة."},
+    en:{t:"Gigantism and acromegaly: one hormone, two stories", topic:"Endocrine", d:"A two-person talk with custom animated line diagrams: the pituitary-liver axis, the adenoma and the epiphyseal plate.", h:"Custom medical animation instead of stock images."}},
+  { id:"hemostasis", cat:"ai", kind:"AI Video", dur:"0:30", tags:["AI Video","Physiology"],
+    ar:{t:"من وخزة إصبع إلى جلطة فيبرين", topic:"فسيولوجيا · الإرقاء", d:"مشاهد سينمائية مولّدة بالذكاء الاصطناعي تشرح الإرقاء: انقباض الوعاء، سدادة الصفائح، شبكة الفيبرين، ثم التئام الجلد.", h:"عندك آلية معقّدة؟ أحوّلها لفيلم مدته 30 ثانية."},
+    en:{t:"From a finger prick to a fibrin clot", topic:"Physiology · Hemostasis", d:"AI-generated cinematic shots explaining hemostasis: vasoconstriction, the platelet plug, the fibrin mesh, then skin healing.", h:"Got a complex mechanism? I'll make it a 30-second film."}},
+  { id:"caffeine", cat:"levels", kind:"3 Levels", dur:"1:07", tags:["3 Levels","Pharmacology"],
+    ar:{t:"الكافيين في 3 مستويات", topic:"فارماكولوجي", d:"تشبيه الكراسي يتحول تدريجيًا إلى Adenosine وA1 وA2A receptors، بنفس الخيط البصري من البداية للنهاية.", h:"تشبيه بسيط يقود إلى آلية دقيقة."},
+    en:{t:"Caffeine in 3 levels", topic:"Pharmacology", d:"A chairs analogy grows into adenosine and A1/A2A receptors, with one visual thread from start to finish.", h:"A simple analogy that leads to a precise mechanism."}},
+  { id:"cystitis", cat:"podcast", kind:"Talking head", dur:"0:46", tags:["Talking Head","Urology"],
+    ar:{t:"Honeymoon cystitis: موضوع حساس بأسلوب محترم", topic:"مسالك · صحة المرأة", d:"مقطع لمتحدث واحد مع رسوم للمثانة وبطاقات أعراض ونصائح، بنبرة مهنية هادئة.", h:"المواضيع الحساسة تحتاج نبرة صحيحة، وهذا جزء من شغلي."},
+    en:{t:"Honeymoon cystitis: a sensitive topic, handled well", topic:"Urology · Women's health", d:"A single-speaker reel with bladder graphics and symptom cards, in a calm professional tone.", h:"Sensitive topics need the right tone. That is part of the job."}},
+  { id:"mitral", cat:"motion", kind:"Motion", dur:"0:42", tags:["Motion Graphics","Cardiology"],
+    ar:{t:"مريض بيكحّ دم… والمشكلة في القلب", topic:"قلب", d:"سلسلة سببية متحركة: تضيّق الصمام الميترالي ← ارتفاع ضغط الأذين الأيسر ← احتقان رئوي ← Hemoptysis.", h:"أحوّل الـ pathophysiology إلى خريطة يفهمها أي مشاهد."},
+    en:{t:"Coughing blood, but the problem is the heart", topic:"Cardiology", d:"An animated causal chain: mitral stenosis → raised left atrial pressure → pulmonary congestion → hemoptysis.", h:"I turn pathophysiology into a map anyone can follow."}},
+  { id:"cullen", cat:"motion", kind:"Motion", dur:"0:30", tags:["Motion Graphics","GI · Surgery"],
+    ar:{t:"Cullen sign: كدمة حول السرّة", topic:"جهاز هضمي · جراحة", d:"من التهاب البنكرياس الحاد إلى نزيف يتتبّع المستويات النسيجية حتى السرة، مع مخطط ملخّص في النهاية.", h:"علامة سريرية واحدة تكفي لريل يُحفظ ويُشارك."},
+    en:{t:"Cullen sign: a bruise around the navel", topic:"GI · Surgery", d:"From acute pancreatitis to bleeding that tracks along tissue planes to the umbilicus, ending with a summary flow.", h:"One clinical sign is enough for a reel people save and share."}},
+  { id:"felty", cat:"motion", kind:"Kinetic", dur:"0:23", tags:["Kinetic Text","Rheumatology"],
+    ar:{t:"Felty syndrome في 23 ثانية", topic:"روماتيزم", d:"الثلاثية RA + Neutropenia + Splenomegaly تُبنى كلمة كلمة مع أيقونات، ثم ملاحظة تثبّت أهم نقطة.", h:"أسرع طريقة لترسيخ معلومة: ثلاث كلمات وأيقونة.", v:"النسخة الثانية بخطّاف مختلف"},
+    en:{t:"Felty syndrome in 23 seconds", topic:"Rheumatology", d:"The RA + neutropenia + splenomegaly triad builds word by word with icons, then a sticky note pins the key point.", h:"The fastest way to make a fact stick: three words and an icon.", v:"Cut B, different hook"}}
+];
+
+
+const root = document.documentElement;
+let lang = (navigator.language || "").toLowerCase().startsWith("ar") ? "ar" : "en";
+try { const s = localStorage.getItem("sa-lang"); if (s === "ar" || s === "en") lang = s; } catch(e) {}
+
+function setLang(l){
+  lang = l;
+  root.setAttribute("data-lang", l);
+  root.lang = l; root.dir = l === "ar" ? "rtl" : "ltr";
+  document.querySelectorAll("[data-set-lang]").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.setLang === l)));
+  try { localStorage.setItem("sa-lang", l); } catch(e) {}
+  renderWorks(); renderDose(); renderSig(); renderContact();
+  document.getElementById("rx-name").placeholder = l === "ar" ? "مثال: عيادة د. … للجلدية" : "e.g. Dr. … Dermatology Clinic";
+}
+document.querySelectorAll("[data-set-lang]").forEach(b => b.addEventListener("click", () => setLang(b.dataset.setLang)));
+
+let filter = "all";
+const playSvg = '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4l13 8-13 8z"/></svg>';
+function renderWorks(){
+  const box = document.getElementById("works");
+  box.innerHTML = WORKS.map(w => {
+    const c = w[lang];
+    return `<article class="work" data-cat="${w.cat}" ${filter!=="all"&&filter!==w.cat?"hidden":""}>
+      <button class="phone" type="button" data-open="${w.id}" aria-label="${c.t}">
+        <img src="media/${w.id}.jpg" alt="" loading="lazy">
+        <video muted loop playsinline preload="none" data-src="media/${w.id}.mp4"></video>
+        <span class="kind">${w.kind}</span>
+        <span class="play"><span>${w.dur}</span><i>${playSvg}</i></span>
+      </button>
+      <div><h3>${c.t}</h3><div class="topic">${c.topic}</div></div>
+    </article>`;
+  }).join("") + `<a class="add-slot" href="https://www.instagram.com/med_vengers/" target="_blank" rel="noopener"><span><b>+</b>${lang==="ar"?"المزيد على @med_vengers":"More on @med_vengers"}</span></a>`;
+  const hover = matchMedia("(hover:hover)").matches && !matchMedia("(prefers-reduced-motion:reduce)").matches;
+  box.querySelectorAll(".phone").forEach(ph => {
+    const v = ph.querySelector("video");
+    if (hover){
+      ph.addEventListener("mouseenter", () => { if(!v.src) v.src = v.dataset.src; v.play().then(()=>ph.classList.add("previewing")).catch(()=>{}); });
+      ph.addEventListener("mouseleave", () => { v.pause(); ph.classList.remove("previewing"); });
+    }
+    ph.addEventListener("click", () => openLB(ph.dataset.open));
+  });
+}
+document.querySelectorAll("[data-filter]").forEach(b => b.addEventListener("click", () => {
+  filter = b.dataset.filter;
+  document.querySelectorAll("[data-filter]").forEach(x => x.setAttribute("aria-pressed", String(x === b)));
+  document.querySelectorAll(".work").forEach(el => el.hidden = !(filter === "all" || el.dataset.cat === filter));
+}));
+
+const lb = document.getElementById("lb"), lbv = document.getElementById("lb-video"), lbAlt = document.getElementById("lb-alt");
+let lastFocus = null, current = null, showingAlt = false;
+function loadVideo(src){ lbv.src = "media/" + src + ".mp4"; lbv.poster = "media/" + src + ".jpg"; lbv.play().catch(()=>{}); }
+function openLB(id){
+  const w = WORKS.find(x => x.id === id); if (!w) return;
+  lastFocus = document.activeElement; current = w; showingAlt = false;
+  document.querySelectorAll(".phone video").forEach(v => v.pause());
+  const c = w[lang];
+  document.getElementById("lb-title").textContent = c.t;
+  document.getElementById("lb-desc").textContent = c.d;
+  document.getElementById("lb-tags").innerHTML = w.tags.map(t => `<span>${t}</span>`).join("");
+  lbAlt.hidden = !w.alt; if (w.alt) lbAlt.textContent = c.v;
+  lb.hidden = false; loadVideo(w.id);
+  document.getElementById("lb-close").focus();
+}
+lbAlt.addEventListener("click", () => {
+  showingAlt = !showingAlt;
+  loadVideo(showingAlt ? current.alt : current.id);
+  lbAlt.textContent = showingAlt ? (lang === "ar" ? "النسخة الأولى" : "Cut A") : current[lang].v;
+});
+function closeLB(){ lbv.pause(); lbv.removeAttribute("src"); lbv.load(); lb.hidden = true; if(lastFocus) lastFocus.focus(); }
+document.getElementById("lb-close").addEventListener("click", closeLB);
+lb.addEventListener("click", e => { if (e.target === lb) closeLB(); });
+document.addEventListener("keydown", e => { if (e.key === "Escape" && !lb.hidden) closeLB(); });
+
+const SCRIPT = [
+  {s:0}, {p:"I need to reschedule my appointment."}, {s:1}, {t:900},
+  {a:"Sure. What's the phone number on the booking, and roughly when was it?"},
+  {p:"0100-000-0000, tomorrow at 1pm."}, {s:2}, {t:1100},
+  {a:"Found it. What time would you like to move it to?"},
+  {p:"Tuesday at 10:30 AM, if it's free."}, {s:3}, {t:900}, {s:4}, {t:700}, {s:5}, {t:700}, {s:6},
+  {a:"Done. Your appointment is now Tuesday · 10:30 AM.", ok:true}
+];
+const chat = document.getElementById("chat"), steps = [...document.querySelectorAll(".step")];
+let timers = [], played = false;
+const reduce = matchMedia("(prefers-reduced-motion:reduce)").matches;
+function addMsg(text, cls){ const d = document.createElement("div"); d.className = "msg " + cls; d.textContent = text; chat.appendChild(d); }
+function showAll(){ chat.innerHTML = ""; SCRIPT.forEach(x => { if(x.p) addMsg(x.p,"p"); if(x.a) addMsg(x.a,"a"+(x.ok?" ok":"")); }); steps.forEach(s => s.className = "step done"); }
+function runChat(){
+  timers.forEach(clearTimeout); timers = [];
+  if (reduce){ showAll(); return; }
+  chat.innerHTML = ""; steps.forEach(s => s.className = "step");
+  let t = 300, typing = null;
+  const mark = i => { steps.forEach((s,j)=>{ if(j<i){s.classList.remove("run"); s.classList.add("done");} }); steps[i].classList.add("run"); };
+  SCRIPT.forEach(x => {
+    if (x.p){ timers.push(setTimeout(()=>addMsg(x.p,"p"), t)); t += 900; }
+    else if (x.a){
+      timers.push(setTimeout(()=>{ typing = document.createElement("div"); typing.className="typing"; typing.innerHTML="<i></i><i></i><i></i>"; chat.appendChild(typing); }, t));
+      t += 1000;
+      timers.push(setTimeout(()=>{ typing && typing.remove(); addMsg(x.a,"a"+(x.ok?" ok":"")); }, t)); t += 1300;
+    }
+    else if (x.s !== undefined){ const i = x.s; timers.push(setTimeout(()=>mark(i), t)); t += 350; }
+    else if (x.t){ t += x.t; }
+  });
+  timers.push(setTimeout(()=>steps.forEach(s=>{s.classList.remove("run");s.classList.add("done");}), t));
+}
+document.getElementById("replay").addEventListener("click", runChat);
+showAll();
+if ("IntersectionObserver" in window){
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting && !played){ played = true; runChat(); } }), {threshold:.4});
+  io.observe(document.querySelector(".sim"));
+}
+
+const SVC = {
+  content:{ar:"إدارة المحتوى الطبي وكتابة السكريبتات", en:"Medical content & scripting"},
+  edit:{ar:"مونتاج ريلز قصيرة", en:"Short-form reel editing"},
+  ai:{ar:"فيديوهات طبية بالذكاء الاصطناعي", en:"AI-generated medical videos"},
+  auto:{ar:"أتمتة العيادة بـ n8n", en:"Clinic automation with n8n"}
+};
+const DOSES = {
+  ar:["ريل واحد أسبوعيًا × ٣ شهور","٣ ريلز أسبوعيًا × شهر","مشروع واحد","استشارة أولية فقط"],
+  en:["1 reel weekly × 3 months","3 reels weekly × 1 month","One project","Initial consult only"]
+};
+const doseSel = document.getElementById("rx-dose");
+function renderDose(){ const i = Math.max(0, doseSel.selectedIndex); doseSel.innerHTML = DOSES[lang].map(d=>`<option>${d}</option>`).join(""); doseSel.selectedIndex = i; }
+function sigText(){
+  const name = document.getElementById("rx-name").value.trim();
+  const picked = [...document.querySelectorAll(".checks input:checked")].map(c => SVC[c.value][lang]);
+  const dose = doseSel.value;
+  return lang === "ar"
+    ? `مرحبًا صبري،\nأنا ${name || "[الاسم / العيادة]"}.\nمحتاج: ${picked.length ? picked.join("، ") : "[اختر خدمة]"}.\nالجرعة: ${dose}.\nخلّينا نتكلم عن التفاصيل.`
+    : `Hi Sabri,\nThis is ${name || "[name / clinic]"}.\nI need: ${picked.length ? picked.join(", ") : "[pick a service]"}.\nDose: ${dose}.\nLet's talk details.`;
+}
+function renderSig(){ const t = sigText(); document.getElementById("sig").textContent = t; document.getElementById("rx-wa").href = CONTACT.waLink + "?text=" + encodeURIComponent(t); }
+const form = document.getElementById("rxform");
+form.addEventListener("input", renderSig);
+form.addEventListener("change", renderSig);
+form.addEventListener("submit", e => {
+  e.preventDefault();
+  const out = document.getElementById("copied");
+  const ok = () => { out.hidden = false; out.textContent = lang === "ar" ? "تم النسخ" : "Copied"; };
+  const fallback = () => { const r = document.createRange(); r.selectNodeContents(document.getElementById("sig")); const s = getSelection(); s.removeAllRanges(); s.addRange(r); out.hidden = false; out.textContent = lang === "ar" ? "النص محدد، انسخه يدويًا" : "Text selected, copy it manually"; };
+  try { navigator.clipboard.writeText(sigText()).then(ok, fallback); } catch(err){ fallback(); }
+});
+function renderContact(){
+  const box = document.getElementById("contact"), items = [];
+  if (CONTACT.whatsapp) items.push(`<a href="${CONTACT.waLink}" target="_blank" rel="noopener">WhatsApp · ${CONTACT.whatsapp}</a>`);
+  if (CONTACT.email) items.push(`<span>${CONTACT.email}</span>`);
+  if (CONTACT.instagram) items.push(`<a href="${CONTACT.instagram}" target="_blank" rel="noopener">Instagram · ${CONTACT.handle}</a>`);
+  if (CONTACT.linkedin) items.push(`<a href="${CONTACT.linkedin}" target="_blank" rel="noopener">LinkedIn</a>`);
+  box.innerHTML = items.join(""); box.hidden = !items.length;
+}
+
+setLang(lang);
+</script>
+
+<script>try{if(DEMO_URL){const b=document.getElementById("live-demo");b.href=DEMO_URL;b.hidden=false;}}catch(e){}</script>
+</body>
+</html>
